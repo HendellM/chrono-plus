@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+}
+
+.navbar-principal{
+    width: 100%;
+    height: 50px;
+    background-color:#C3C2B7;
+}
+
+.container-navbar-principal{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+}
+
+.logo-container{
+    flex: 1;
+}
+.menu{
+    flex: 6;
+}
+.perfil{
+    flex: 2;
+}
+.logo{
+   font-family: League Spartan;
+}
+.navbar-lateral{
+    width: 50px;
+    height: 100%;
+    background-color:#C3C2B7;
+    position: fixed;
+    top: 0;
+}
