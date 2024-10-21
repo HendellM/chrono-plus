@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narradores de Javé</title>
+    <link rel="stylesheet" href="../css/filmes.css"> 
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container-navbar">
+            <div class="logo">
+                <a href="../index.html"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Séries</a></li>
+                    <li><a href="#">Minha Lista</a></li>
+                </ul>
+            </div>
+            <div class="perfil">
+                <a href="../perfil.html">Perfil</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SEÇÃO homi que ri -->
+    <section class="filme">
+        <div class="banner-filme">
+            <img src="../img/homemqueri-banner.jpg" alt="O Homem Que Ri">
+            <div class="filme-info">
+                <h2>O Homem que Ri</h2>
+                <p class="sinopse">Herdeiro de um ducado, Gwynplaine é seqüestrado quando garoto e, por ordem do rei, ele fica com o rosto esculpido num perpétuo sorriso macabro. Quando cresce, acaba virando atração de circo como palhaço.</p>
+                <div class="botoes">
+                    <button class="assistir-btn">Assistir</button>
+                    <button class="minha-lista-btn">Minha Lista</button>
+                </div>
+                <h3>Elenco:</h3>
+                <ul class="elenco">
+                    <li>Conrad Veidt</li>
+                    <li>Mary Philbin</li>
+                    <li>Olga Baclanova</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para o vídeo -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe id="videoPlayer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="novo-rodape">
+        <div class="container-rodape">
+            <div class="logo-container">
+                <h1 class="logo">CHRONO+</h1>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="https://forms.gle/fh9D8Mg1awRMFNoi7">Feedback</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const videoModal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const closeBtn = document.querySelector('.close-btn');
+
+        document.querySelector('.assistir-btn').addEventListener('click', function() {
+            videoPlayer.src = 'https://www.youtube.com/embed/measf7YpqO0?si=oTDdZOGxDISw2Bah'; // Coloque o ID do vídeo aqui
+            videoModal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            videoModal.style.display = 'none';
+            videoPlayer.src = 'flex'; // Para parar o vídeo quando fechar
+        });
+
+        window.onclick = function(event) {
+            if (event.target == videoModal) {
+                videoModal.style.display = 'none';
+                videoPlayer.src = ''; // Para parar o vídeo quando fechar
+            }
+        }
+    </script>
+</body>
+</html>
