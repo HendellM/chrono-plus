@@ -12,18 +12,18 @@
     <nav class="navbar">
         <div class="container-navbar">
             <div class="logo">
-                <a href="index.html"></a>
+                <a href="../index.html"></a>
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="../index.html">Início</a></li>
                     <li><a href="#">Filmes</a></li>
                     <li><a href="#">Séries</a></li>
                     <li><a href="#">Minha Lista</a></li>
                 </ul>
             </div>
             <div class="perfil">
-                <a href="perfil.html">Perfil</a>
+                <a href="../perfil.html">Perfil</a>
             </div>
         </div>
     </nav>
@@ -85,12 +85,12 @@
 
         document.querySelector('.assistir-btn').addEventListener('click', function() {
             videoPlayer.src = 'https://www.youtube.com/embed/WkTTITex2RE?si=ZmpckDMOCE6p1zO3'; // Coloque o ID do vídeo aqui
-            videoModal.style.display = 'block';
+            videoModal.style.display = 'flex';
         });
 
         closeBtn.addEventListener('click', function() {
             videoModal.style.display = 'none';
-            videoPlayer.src = ''; // Para parar o vídeo quando fechar
+            videoPlayer.src = 'flex'; // Para parar o vídeo quando fechar
         });
 
         window.onclick = function(event) {
