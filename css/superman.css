@@ -1,0 +1,199 @@
+/* Estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #212121;
+    padding: 15px 20px;
+}
+
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #e50914;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.perfil a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Seção do Filme */
+.filme {
+    position: relative;
+}
+
+.banner-filme {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-filme img {
+    width: 100%;
+    height: auto;
+    filter: brightness(60%);
+}
+
+.filme-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 400px;
+}
+
+.filme-info h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.sinopse {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.botoes {
+    margin-top: 10px;
+}
+
+.assistir-btn,
+.minha-lista-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.assistir-btn:hover,
+.minha-lista-btn:hover {
+    background-color: #f40612;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+/* SEÇÃO EPISÓDIOS */
+.episodios {
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.episodios h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.lista-episodios {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lista-episodios li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.lista-episodios li:hover {
+    background-color: #444;
+}
+
+.lista-episodios li span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.botoes-episodio {
+    display: flex;
+    gap: 1em;
+}
+
+.assistir-btn, .download-btn {
+    background-color: #e50914;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.assistir-btn:hover, .download-btn:hover {
+    background-color: #b20810;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #212121;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social p {
+    margin-bottom: 5px;
+}
+
+.footer-social a {
+    color: #e50914;
+    margin: 0 5px;
+}

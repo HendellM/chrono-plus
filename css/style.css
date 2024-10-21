@@ -1,0 +1,356 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f2ede4; 
+    color: #403F4D; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Principal */
+.navbar-principal {
+    background-color:#403F4D; 
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    height: 50px;
+}
+
+.container-navbar-principal {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    font-family: 'Sen', 'sans serif';
+    font-weight: bold;
+}
+
+.logo {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #FFF; 
+}
+.logo-container{
+    flex: 1;
+}
+.menu {
+    flex: 6;
+}
+.perfil-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+.perfil-foto{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a:hover {
+    color: #F2BC57; 
+}
+
+/* Navbar Lateral (Categorias) */
+.navbar-lateral {
+    position: fixed;
+    background-color: #403f4d; 
+    width: 50px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-lateral ul {
+    list-style: none;
+}
+
+.navbar-lateral ul li {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.navbar-lateral ul li a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.navbar-lateral ul li a:hover {
+    color: #F2BC57; 
+}
+
+/* Banner */
+.banner {
+    background-image: url('img/banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #F2BC57;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+
+.banner-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #403F4D;
+}
+
+.banner-title {
+    color: black; 
+}
+
+.banner-content p {
+    font-size: 1.3rem;
+    color: #403F4D;
+
+}
+
+/* Seção de Filmes */
+.filmes {
+    margin-left: 220px;
+    padding: 40px;
+}
+
+.container-filmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.filme-card {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.filme-card:hover {
+    transform: scale(1.05);
+}
+
+.filme-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.filme-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.filme-card:hover .filme-info {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.filme-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #F24C3D; 
+}
+
+.filme-info p {
+    font-size: 1rem;
+    color: white;
+}
+/* Seção de serie */
+
+
+
+.series {
+    margin-left: 220px;
+    padding: 40px;
+}
+
+.container-series {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.series-card {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.series-card:hover {
+    transform: scale(1.05); 
+}
+
+.series-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.series-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.series-card:hover .series-info {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.series-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #F24C3D;
+}
+
+.series-info p {
+    font-size: 1rem;
+    color: white;
+}
+.series-card .assistir-btn {
+    padding: 10px 20px;
+    background-color: #F24C3D;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    display: block; 
+    transition: background-color 0.3s;
+}
+
+/* Rodapé */
+.footer {
+    background-color: black; 
+    color: white;
+    padding: 20px 0;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-right: 20px;
+}
+
+.footer-links ul li a {
+    color: white;
+}
+
+.footer-links ul li a:hover {
+    color: #F2BC57; 
+}
+
+.footer-social p {
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    color: white;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #F24C3D; 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-lateral {
+        display: none;
+    }
+
+    .filmes, .series {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .container-filmes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-filmes {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+.assistir-btn {
+    padding: 10px 20px;
+    background-color: #F24C3D; 
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    display: none; 
+    transition: background-color 0.3s;
+}
+
+.filme-card:hover .assistir-btn {
+    display: block; 
+}
+
+.filme-card:hover .filme-info {
+    opacity: 1; 
+    visibility: visible;
+    transform: translateY(0);
+}
