@@ -269,51 +269,67 @@ a {
 }
 
 /* Rodapé */
-.footer {
-    background-color: black; 
+/* Removido o estilo do rodapé anterior */
+
+/* Novo Rodapé */
+.novo-rodape {
+    background-color: #403F4D; 
     color: white;
     padding: 20px 0;
-    z-index: 10;
 }
 
-.container-footer {
+.novo-rodape .container-rodape {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.footer-links ul {
+.novo-rodape .footer-links {
     display: flex;
+    justify-content: center;
     list-style: none;
+    padding: 10px 0;
 }
 
-.footer-links ul li {
-    margin-right: 20px;
+.novo-rodape .footer-links li {
+    margin: 0 15px;
 }
 
-.footer-links ul li a {
+.novo-rodape .footer-links a {
     color: white;
-}
-
-.footer-links ul li a:hover {
-    color: #F2BC57; 
-}
-
-.footer-social p {
-    margin-bottom: 10px;
-}
-
-.footer-social a {
-    color: white;
-    margin-right: 10px;
     transition: color 0.3s;
 }
 
-.footer-social a:hover {
-    color: #F24C3D; 
+.novo-rodape .footer-links a:hover {
+    color: #F2BC57; 
 }
+
+.novo-rodape .logo-container {
+    margin: 20px 0;
+}
+
+.novo-rodape .logo {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F2BC57; 
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .novo-rodape .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .novo-rodape .footer-links li {
+        margin: 5px 0;
+    }
+}
+
 
 /* Responsividade */
 .menu-btn{
