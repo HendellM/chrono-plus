@@ -36,8 +36,8 @@
                 <h2>Narradores de Javé</h2>
                 <p class="sinopse">Ao saber que Javé pode desaparecer sob as águas de uma hidrelétrica, os moradores do vilarejo decidem escrever sua história e transformar o local em patrimônio a ser preservado.</p>
                 <div class="botoes">
-                    <a href="#" class="assistir-btn">Assistir</a>
-                    <a href="#" class="minha-lista-btn">Minha Lista</a>
+                    <button class="assistir-btn">Assistir</button>
+                    <button class="minha-lista-btn">Minha Lista</button>
                 </div>
                 <h3>Elenco:</h3>
                 <ul class="elenco">
@@ -48,6 +48,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal para o vídeo -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe id="videoPlayer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <!-- RODAPÉ -->
     <footer class="footer">
@@ -70,5 +78,27 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        const videoModal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const closeBtn = document.querySelector('.close-btn');
+
+        document.querySelector('.assistir-btn').addEventListener('click', function() {
+            videoPlayer.src = 'https://www.youtube.com/embed/WkTTITex2RE?si=ZmpckDMOCE6p1zO3'; // Coloque o ID do vídeo aqui
+            videoModal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            videoModal.style.display = 'none';
+            videoPlayer.src = ''; // Para parar o vídeo quando fechar
+        });
+
+        window.onclick = function(event) {
+            if (event.target == videoModal) {
+                videoModal.style.display = 'none';
+                videoPlayer.src = ''; // Para parar o vídeo quando fechar
+            }
+        }
+    </script>
 </body>
 </html>
