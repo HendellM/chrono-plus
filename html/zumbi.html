@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Noite dos Mortos-Vivos</title>
-    <link rel="stylesheet" href="dopamina.css">
-    <link rel="stylesheet" href="zumbi.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/filmes.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- NAVBAR -->
@@ -17,7 +16,7 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li>  <a href="index.html">Início</a></li>
+                    <li>  <a href="../index.html">Início</a></li>
                     <li><a href="#">Filmes</a></li>
                     <li><a href="#">Séries</a></li>
                     <li><a href="#">Minha Lista</a></li>
@@ -28,17 +27,24 @@
             </div>
         </div>
     </nav>
+    <!-- Modal para o vídeo -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe id="videoPlayer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <!-- SEÇÃO A NOITE DOS MORTOS VIVOS -->
     <section class="filme">
         <div class="banner-filme">
-            <img src="img/zumbi.jpg" alt="A Noite dos Mortos-Vivos">
+            <img src="../img/zumbi.jpg" alt="A Noite dos Mortos-Vivos">
             <div class="filme-info">
                 <h2>A Noite dos Mortos-Vivos</h2>
                 <p class="sinopse">Um grupo pessoas se refugia em uma casa abandonada quando cadáveres voltam à vida e tentam devorar os vivos. O pragmático Ben faz o possível para controlar a situação, mas quando os zumbis cercam o local, os outros sobreviventes entram em pânico.</p> 
                 <div class="botoes">
-                    <a href="#" class="assistir-btn">Assistir</a>
-                    <a href="#" class="minha-lista-btn">Minha Lista</a>
+                    <button class="assistir-btn">Assistir</button>
+                    <button class="minha-lista-btn">Minha Lista</button>
                 </div>
                 <h3>Elenco:</h3>
                 <ul class="elenco">
@@ -71,5 +77,27 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        const videoModal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const closeBtn = document.querySelector('.close-btn');
+
+        document.querySelector('.assistir-btn').addEventListener('click', function() {
+            videoPlayer.src = 'https://www.youtube.com/embed/pv3ewzSEx24?si=I6hCMa3n_og28ENb'; // Coloque o ID do vídeo aqui
+            videoModal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            videoModal.style.display = 'none';
+            videoPlayer.src = ''; // Para parar o vídeo quando fechar
+        });
+
+        window.onclick = function(event) {
+            if (event.target == videoModal) {
+                videoModal.style.display = 'none';
+                videoPlayer.src = ''; // Para parar o vídeo quando fechar
+            }
+        }
+    </script>
 </body>
 </html>
