@@ -181,3 +181,52 @@ h3 {
     cursor: pointer;
 }
 
+/* Navbar Responsiva */
+@media (max-width: 768px) {
+    .container-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Seção do Filme Responsiva */
+@media (max-width: 768px) {
+    .filme-info {
+        position: static;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .banner-filme img {
+        height: auto;
+        max-height: 300px; /* Limitar altura da imagem em telas menores */
+    }
+
+    .assistir-btn,
+    .minha-lista-btn {
+        width: 100%; /* Botões ocupam toda a largura em telas pequenas */
+        margin: 10px 0; /* Margem entre os botões */
+    }
+}
+
+/* Modal Responsivo */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Modal ocupa 90% da largura em telas pequenas */
+        max-width: 100%; /* Máxima largura do modal */
+    }
+
+    #videoPlayer {
+        width: 100%; /* O player de vídeo ocupa toda a largura do modal */
+        height: auto; /* Mantém a proporção do vídeo */
+    }
+}
